@@ -45,7 +45,7 @@ const KeyboardSafeView = ({ children, style }) => {
     if (endCoordinates.height && initialViewHeight.current) {
       const keyboardHeight =
         Dimensions.get('window').height - endCoordinates.screenY
-      setViewHeight(initialViewHeight.current - keyboardHeight - 80)
+      setViewHeight(initialViewHeight.current - keyboardHeight - 140)
     }
   }
 

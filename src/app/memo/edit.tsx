@@ -1,10 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-import {
-  View,
-  TextInput,
-  StyleSheet,
-  Alert
-} from 'react-native'
+import { View, TextInput, StyleSheet, Alert } from 'react-native'
 import { router, useLocalSearchParams } from 'expo-router'
 import { useState, useEffect } from 'react'
 import { doc, getDoc, setDoc, Timestamp } from 'firebase/firestore'
@@ -42,8 +36,7 @@ const Edit = (): JSX.Element => {
     const ref = doc(db, `users/${auth.currentUser.uid}/memos`, id)
     getDoc(ref)
       .then((docRef) => {
-        const RemoteBodyText = docRef?.data()?.bodyText
-        setBodyText(RemoteBodyText)
+        setBodyText(String(docRef?.data()?.bodyText))
       })
       .catch((error) => {
         console.log(error)
