@@ -7,7 +7,7 @@ import KeyboardAvoidingView from '../../components/KeyboardAvoidingView'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
 import { auth, db } from '../../config'
-
+// テストメモ
 const handlePress = (id: string, bodyText: string): void => {
   if (auth.currentUser === null) {
     return
